@@ -1,3 +1,13 @@
-<html>
-  <script>location.href=location.search.slice(1)</script>
+<html> 
+ <head> 
+  <script>
+let s = location.href.split("http.nezu.kro.kr/?")[1]
+if(s.includes("http")||s.includes("://")) 
+location.href = s
+</script>
+ </head>  
+ <body>
+<p>리디렉션 url에 http(s)가 없습니다.<br>
+http를 추가해주세요.</p>
+ </body>
 </html>
