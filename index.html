@@ -1,12 +1,11 @@
 <html> 
- <head> 
+ <head>
   <script>
-let s = location.href.split("url.nezu.kro.kr/?")[1]
-if(s.includes("http")||s.includes("://")) 
-location.href = s
-</script>
- </head>  
+            let s= location.pathname.slice(1)||location.search.slice(1)
+            if(s.startsWith("http")||s.includes("//")) location.href = s
+            else location.href= 'http://'+s
+        </script> 
+ </head> 
  <body>
-<p>어딘가 오류가 발생하였습니다.</p>
  </body>
 </html>
